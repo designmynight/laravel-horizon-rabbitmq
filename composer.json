@@ -1,0 +1,37 @@
+{
+    "name": "designmynight/laravel-horizon-rabbitmq",
+    "description": "A package to support horizon with RabbitMQ",
+    "homepage": "https://github.com/designmynight/laravel-horizon-rabbitmq",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "laravel-horizon",
+        "laravel-horizon-rabbitmq",
+        "rabbitmq",
+        "designmynight"
+    ],
+    "require": {
+        "illuminate/support": "^5.6",
+        "laravel/horizon": "^1.4",
+        "vladimir-yuldashev/laravel-queue-rabbitmq": "7.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "DesignMyNight\\Laravel\\Horizon\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Steve Porter",
+            "email": "steve@designmynight.com",
+            "role": "Developer"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DesignMyNight\\Laravel\\Horizon\\HorizonServiceProvider"
+            ]
+        }
+    }
+}
