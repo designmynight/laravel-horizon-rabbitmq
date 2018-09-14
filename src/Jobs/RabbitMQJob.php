@@ -7,7 +7,7 @@ use VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob as BaseJob;
 class RabbitMQJob extends BaseJob
 {
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function delete()
     {
