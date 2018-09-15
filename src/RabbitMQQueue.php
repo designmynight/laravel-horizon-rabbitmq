@@ -33,7 +33,7 @@ class RabbitMQQueue extends BaseQueue
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function push($job, $data = '', $queue = null)
     {
@@ -43,7 +43,7 @@ class RabbitMQQueue extends BaseQueue
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function pushRaw($payload, $queue = null, array $options = [])
     {
@@ -55,7 +55,7 @@ class RabbitMQQueue extends BaseQueue
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function later($delay, $job, $data = '', $queue = null)
     {
@@ -67,7 +67,7 @@ class RabbitMQQueue extends BaseQueue
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     protected function popRaw($queueName = null)
     {
@@ -81,12 +81,10 @@ class RabbitMQQueue extends BaseQueue
             }
             $this->reportConnectionError('pop', $exception);
         }
-
-        return null;
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function pop($queue = null)
     {
@@ -131,7 +129,7 @@ class RabbitMQQueue extends BaseQueue
     }
 
     /**
-     * Fire the job deleted event
+     * Fire the job deleted event.
      *
      * @param  string  $queue
      * @param  \DesignMyNight\Laravel\Horizon\Jobs\RabbitMQJob  $job
@@ -143,7 +141,7 @@ class RabbitMQQueue extends BaseQueue
     }
 
     /**
-     * Get the queue name
+     * Get the queue name.
      *
      * @param string|null $queue
      * @return string
@@ -162,5 +160,4 @@ class RabbitMQQueue extends BaseQueue
     {
         return JobId::generate();
     }
-
 }

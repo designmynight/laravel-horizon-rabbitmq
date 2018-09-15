@@ -8,8 +8,8 @@ use Enqueue\AmqpTools\RabbitMqDlxDelayStrategy;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\Queue\Queue;
 use Illuminate\Queue\Events\WorkerStopping;
-use Interop\Amqp\AmqpConnectionFactory as InteropAmqpConnectionFactory;
 use Interop\Amqp\AmqpConnectionFactory;
+use Interop\Amqp\AmqpConnectionFactory as InteropAmqpConnectionFactory;
 use Interop\Amqp\AmqpContext;
 use VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Connectors\RabbitMQConnector as BaseConnector;
 
@@ -23,7 +23,7 @@ class RabbitMQConnector extends BaseConnector
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function connect(array $config): Queue
     {
