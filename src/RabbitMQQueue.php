@@ -79,6 +79,7 @@ class RabbitMQQueue extends BaseQueue
             if ($message = $consumer->receiveNoWait()) {
                 return new RabbitMQJob($this->container, $this, $consumer, $message);
             }
+        } catch (\Exception $exception) {
             $this->reportConnectionError('pop', $exception);
         }
     }
