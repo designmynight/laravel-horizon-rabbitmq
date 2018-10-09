@@ -97,6 +97,16 @@ class RabbitMQQueue extends BaseQueue
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function release($delay, $job, $data, $queue, $attempts = 0)
+    {
+        $this->lastPushed = $job;
+
+        return parent::release($delay, $job, $data, $queue, $attempts);
+    }
+
+    /**
      * Fire the given event if a dispatcher is bound.
      *
      * @param  string  $queue
