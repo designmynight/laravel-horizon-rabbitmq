@@ -42,7 +42,7 @@ class HorizonServiceProvider extends ServiceProvider
      */
     protected function registerQueueConnectors()
     {
-        $this->app->booted(function(){
+        $this->app->booted(function () {
             $queue = $this->app['queue'];
 
             $queue->addConnector('rabbitmq', function () {
