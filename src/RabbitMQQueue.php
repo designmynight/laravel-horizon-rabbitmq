@@ -82,8 +82,6 @@ class RabbitMQQueue extends BaseQueue
         } catch (\Exception $exception) {
             $this->reportConnectionError('pop', $exception);
         }
-
-        return null;
     }
 
     /**
