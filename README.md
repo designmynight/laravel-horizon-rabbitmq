@@ -26,6 +26,7 @@ composer require designmynight/laravel-horizon-rabbitmq
  Laravel  | Package |
 :---------|:--------|
  5.6.x    | 0.1.x   |
+ 5.7.x    | 1.0.x   |
 
 And add the service provider in `config/app.php`:
 
