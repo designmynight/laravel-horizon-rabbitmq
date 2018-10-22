@@ -128,12 +128,13 @@ class RabbitMQQueue extends BaseQueue
      * Create a payload string from the given job and data.
      *
      * @param  string  $job
+     * @param  string  $queue
      * @param  mixed   $data
      * @return string
      */
-    protected function createPayloadArray($job, $data = '')
+    protected function createPayloadArray($job, $queue, $data = '')
     {
-        return array_merge(parent::createPayloadArray($job, $data), [
+        return array_merge(parent::createPayloadArray($job, $queue, $data), [
             'id' => $this->getRandomId(),
             'attempts' => 0,
         ]);

@@ -11,7 +11,7 @@
         "designmynight"
     ],
     "require": {
-        "illuminate/support": "^5.6",
+        "illuminate/support": "^5.7",
         "laravel/horizon": "^1.4",
         "vladimir-yuldashev/laravel-queue-rabbitmq": "^7.1.1"
     },
