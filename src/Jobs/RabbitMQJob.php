@@ -9,7 +9,7 @@ class RabbitMQJob extends BaseJob
     /**
      * {@inheritdoc}
      */
-    public function delete()
+    public function delete(): void
     {
         parent::delete();
 
